@@ -1,0 +1,2423 @@
+[
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaMultipleMediaCard_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTImageVersion2",
+        "kind": "LinkedField",
+        "name": "image_versions2",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTImageCandidate",
+            "kind": "LinkedField",
+            "name": "candidates",
+            "plural": true,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "url",
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTVideoVersion",
+        "kind": "LinkedField",
+        "name": "video_versions",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "__typename",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "has_audio",
+        "storageKey": null
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaVideoVersions_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostAttachments_media",
+    "selections": [
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostMediaAttachments_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaPostMediaType_media"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTTextPostAppMediaInfo",
+        "kind": "LinkedField",
+        "name": "text_post_app_info",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTLinkPreviewAttachment",
+            "kind": "LinkedField",
+            "name": "link_preview_attachment",
+            "plural": false,
+            "selections": [
+              {
+                "args": null,
+                "kind": "FragmentSpread",
+                "name": "BarcelonaPostLinkPreview_linkPreview"
+              }
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostAvatarCell_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "concreteType": "XDTUserDict",
+          "kind": "LinkedField",
+          "name": "user",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "profile_pic_url",
+              "storageKey": null
+            },
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "username",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "user.username"
+            }
+          ],
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "user"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostBodyCell_media",
+    "selections": [
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostAttachments_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostText_media"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTTextPostAppMediaInfo",
+        "kind": "LinkedField",
+        "name": "text_post_app_info",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTShareInfo",
+            "kind": "LinkedField",
+            "name": "share_info",
+            "plural": false,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "XDTMediaDict",
+                "kind": "LinkedField",
+                "name": "quoted_post",
+                "plural": false,
+                "selections": [
+                  {
+                    "args": null,
+                    "kind": "FragmentSpread",
+                    "name": "BarcelonaPostQuotedPost_media"
+                  }
+                ],
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostReplyContext_textPostAppInfo"
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostBodyCell_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTMediaDict",
+        "kind": "LinkedField",
+        "name": "post",
+        "plural": false,
+        "selections": [
+          {
+            "kind": "RequiredField",
+            "field": {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "code",
+              "storageKey": null
+            },
+            "action": "THROW",
+            "path": "post.code"
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTThreadItem",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostFacepileCell_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "reply_facepile_users",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "profile_pic_url",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTThreadItem",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostHeaderCell_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "code",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "code"
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "concreteType": "XDTUserDict",
+          "kind": "LinkedField",
+          "name": "user",
+          "plural": false,
+          "selections": [
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "username",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "user.username"
+            },
+            {
+              "args": null,
+              "kind": "FragmentSpread",
+              "name": "BarcelonaPostUsernameCell_user"
+            }
+          ],
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "user"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostTimestamp_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostHeaderCell_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTMediaDict",
+        "kind": "LinkedField",
+        "name": "post",
+        "plural": false,
+        "selections": [
+          {
+            "kind": "RequiredField",
+            "field": {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "code",
+              "storageKey": null
+            },
+            "action": "THROW",
+            "path": "post.code"
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTThreadItem",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostLikeCount_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "like_count",
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostLinkPreview_linkPreview",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "display_url",
+          "storageKey": null
+        },
+        "action": "NONE",
+        "path": "display_url"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "favicon_url",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "image_url",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "title",
+        "storageKey": null
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "url",
+          "storageKey": null
+        },
+        "action": "NONE",
+        "path": "url"
+      }
+    ],
+    "type": "XDTLinkPreviewAttachment",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostMediaAttachments_media",
+    "selections": [
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostSingleImageAttachment_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaPostMediaType_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostSingleVideoAttachment_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostMultipleMediaAttachments_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostMetadata_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "code",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "code"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "like_count",
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostLikeCount_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostMetadata_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "view_replies_cta_string",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "reply_facepile_users",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "__typename",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "should_show_replies_cta",
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostFacepileCell_thread_item"
+      }
+    ],
+    "type": "XDTThreadItem",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostMultipleMediaAttachments_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "concreteType": "XDTMediaDict",
+          "kind": "LinkedField",
+          "name": "carousel_media",
+          "plural": true,
+          "selections": [
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "pk",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "carousel_media.pk"
+            },
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "original_height",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "carousel_media.original_height"
+            },
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "original_width",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "carousel_media.original_width"
+            },
+            {
+              "args": null,
+              "kind": "FragmentSpread",
+              "name": "BarcelonaMultipleMediaCard_media"
+            }
+          ],
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "carousel_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaCarouselLightboxMedias_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostOverlayInfo_mediaOverlayInfo",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "description",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTButtonSpec",
+        "kind": "LinkedField",
+        "name": "buttons",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "action",
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "action_url",
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "button_type",
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "text",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaOverlayPayloadSchema",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostQuotePostMetadata_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "code",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "code"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTTextPostAppMediaInfo",
+        "kind": "LinkedField",
+        "name": "text_post_app_info",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "direct_reply_count",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "like_count",
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostLikeCount_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostQuotedPostBodyCell_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "code",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "code"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTCommentDict",
+        "kind": "LinkedField",
+        "name": "caption",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "text",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTTextPostAppMediaInfo",
+        "kind": "LinkedField",
+        "name": "text_post_app_info",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTShareInfo",
+            "kind": "LinkedField",
+            "name": "share_info",
+            "plural": false,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "XDTMediaDict",
+                "kind": "LinkedField",
+                "name": "quoted_post",
+                "plural": false,
+                "selections": [
+                  {
+                    "args": null,
+                    "kind": "FragmentSpread",
+                    "name": "BarcelonaPostQuotedPostQuote_media"
+                  }
+                ],
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostAttachments_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostText_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostQuotedPostCell_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "concreteType": "XDTUserDict",
+          "kind": "LinkedField",
+          "name": "user",
+          "plural": false,
+          "selections": [
+            {
+              "args": null,
+              "kind": "FragmentSpread",
+              "name": "BarcelonaPostUsernameCell_user"
+            }
+          ],
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "user"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostAvatarCell_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaPostOverlayInfo_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostQuotedPostBodyCell_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostQuotePostMetadata_media"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostTimestamp_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostQuotedPostQuote_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTCommentDict",
+        "kind": "LinkedField",
+        "name": "caption",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "text",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "user",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "username",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTTextPostAppMediaInfo",
+        "kind": "LinkedField",
+        "name": "text_post_app_info",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "is_post_unavailable",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaPostMediaType_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostQuotedPost_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTTextPostAppMediaInfo",
+        "kind": "LinkedField",
+        "name": "text_post_app_info",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "is_post_unavailable",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostQuotedPostCell_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostReplyContext_textPostAppInfo",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "reply_to_author",
+        "plural": false,
+        "selections": [
+          {
+            "kind": "RequiredField",
+            "field": {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "username",
+              "storageKey": null
+            },
+            "action": "THROW",
+            "path": "reply_to_author.username"
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTTextPostAppMediaInfo",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostRepostHeaderCell_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "user",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "username",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostSingleImageAttachment_media",
+    "selections": [
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaImageCandidate_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostSingleVideoAttachment_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "original_height",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "original_height"
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "original_width",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "original_width"
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "has_audio",
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "useBarcelonaVideoVersions_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostText_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTCommentDict",
+        "kind": "LinkedField",
+        "name": "caption",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "text",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostThreadlineCell_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "line_type",
+        "storageKey": null
+      }
+    ],
+    "type": "XDTThreadItem",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostTimestamp_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "taken_at",
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPostUsernameCell_user",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "is_verified",
+        "storageKey": null
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "username",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "username"
+      }
+    ],
+    "type": "XDTUserDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaPost_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTMediaDict",
+        "kind": "LinkedField",
+        "name": "post",
+        "plural": false,
+        "selections": [
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostAvatarCell_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostBodyCell_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostHeaderCell_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostRepostHeaderCell_media"
+          },
+          {
+            "kind": "RequiredField",
+            "field": {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "pk",
+              "storageKey": null
+            },
+            "action": "THROW",
+            "path": "post.pk"
+          },
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTTextPostAppMediaInfo",
+            "kind": "LinkedField",
+            "name": "text_post_app_info",
+            "plural": false,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "is_post_unavailable",
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "XDTShareInfo",
+                "kind": "LinkedField",
+                "name": "share_info",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "concreteType": "XDTMediaDict",
+                    "kind": "LinkedField",
+                    "name": "reposted_post",
+                    "plural": false,
+                    "selections": [
+                      {
+                        "kind": "RequiredField",
+                        "field": {
+                          "alias": null,
+                          "args": null,
+                          "kind": "ScalarField",
+                          "name": "pk",
+                          "storageKey": null
+                        },
+                        "action": "THROW",
+                        "path": "post.text_post_app_info.share_info.reposted_post.pk"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "BarcelonaPostAvatarCell_media"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "BarcelonaPostBodyCell_media"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "BarcelonaPostMetadata_media"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "BarcelonaPostHeaderCell_media"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "useBarcelonaVPVDImpressionLogger_media"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "useBarcelona1pxImpressionLogger_media"
+                      },
+                      {
+                        "args": null,
+                        "kind": "FragmentSpread",
+                        "name": "useBarcelonaPostMediaType_media"
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "concreteType": "XDTCommentDict",
+                        "kind": "LinkedField",
+                        "name": "caption",
+                        "plural": false,
+                        "selections": [
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "text",
+                            "storageKey": null
+                          }
+                        ],
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "concreteType": "XDTTextPostAppMediaInfo",
+                        "kind": "LinkedField",
+                        "name": "text_post_app_info",
+                        "plural": false,
+                        "selections": [
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "is_post_unavailable",
+                            "storageKey": null
+                          }
+                        ],
+                        "storageKey": null
+                      }
+                    ],
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTCommentDict",
+            "kind": "LinkedField",
+            "name": "caption",
+            "plural": false,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "text",
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostMetadata_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "useBarcelonaVPVDImpressionLogger_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "useBarcelona1pxImpressionLogger_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "useBarcelonaPostOverlayInfo_media"
+          },
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "useBarcelonaPostMediaType_media"
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "line_type",
+        "storageKey": null
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostThreadlineCell_thread_item"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostMetadata_thread_item"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostHeaderCell_thread_item"
+      },
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "BarcelonaPostBodyCell_thread_item"
+      }
+    ],
+    "type": "XDTThreadItem",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaProfilePagePostsTimeline_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTThread",
+        "kind": "LinkedField",
+        "name": "threads",
+        "plural": true,
+        "selections": [
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaProfileThread_thread_item"
+          },
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTThreadItem",
+            "kind": "LinkedField",
+            "name": "thread_items",
+            "plural": true,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "__typename",
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTUserTextPostsResponse",
+    "abstractKey": null
+  },
+  {
+    "fragment": {
+      "argumentDefinitions": [
+        { "defaultValue": null, "kind": "LocalArgument", "name": "userID" }
+      ],
+      "kind": "Fragment",
+      "metadata": null,
+      "name": "BarcelonaProfileRootQuery",
+      "selections": [
+        {
+          "alias": "userData",
+          "args": [
+            { "kind": "Literal", "name": "_request_data", "value": {} },
+            { "kind": "Literal", "name": "user_id", "value": 0 },
+            {
+              "kind": "Variable",
+              "name": "user_id_str_override",
+              "variableName": "userID"
+            }
+          ],
+          "concreteType": "XDTUserInfoResponse",
+          "kind": "LinkedField",
+          "name": "xdt_api__v1__users__info",
+          "plural": false,
+          "selections": [
+            {
+              "args": null,
+              "kind": "FragmentSpread",
+              "name": "BarcelonaProfilePage_userInfoResponse"
+            }
+          ],
+          "storageKey": null
+        }
+      ],
+      "type": "Query",
+      "abstractKey": null
+    },
+    "kind": "Request",
+    "operation": {
+      "argumentDefinitions": [
+        { "defaultValue": null, "kind": "LocalArgument", "name": "userID" }
+      ],
+      "kind": "Operation",
+      "name": "BarcelonaProfileRootQuery",
+      "selections": [
+        {
+          "alias": "userData",
+          "args": [
+            { "kind": "Literal", "name": "_request_data", "value": {} },
+            { "kind": "Literal", "name": "user_id", "value": 0 },
+            {
+              "kind": "Variable",
+              "name": "user_id_str_override",
+              "variableName": "userID"
+            }
+          ],
+          "concreteType": "XDTUserInfoResponse",
+          "kind": "LinkedField",
+          "name": "xdt_api__v1__users__info",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "XDTUserDict",
+              "kind": "LinkedField",
+              "name": "user",
+              "plural": false,
+              "selections": [
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "is_private",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "profile_pic_url",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "username",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "concreteType": "XDTProfilePicUrlInfo",
+                  "kind": "LinkedField",
+                  "name": "hd_profile_pic_versions",
+                  "plural": true,
+                  "selections": [
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "height",
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "url",
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "width",
+                      "storageKey": null
+                    }
+                  ],
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "is_verified",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "biography",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "concreteType": "XDTTextWithLinkedEntities",
+                  "kind": "LinkedField",
+                  "name": "biography_with_entities",
+                  "plural": false,
+                  "selections": [
+                    {
+                      "alias": null,
+                      "args": null,
+                      "concreteType": "XDTLinkedEntity",
+                      "kind": "LinkedField",
+                      "name": "entities",
+                      "plural": true,
+                      "selections": [
+                        {
+                          "alias": null,
+                          "args": null,
+                          "concreteType": "XDTLinkedEntityUser",
+                          "kind": "LinkedField",
+                          "name": "user",
+                          "plural": false,
+                          "selections": [
+                            {
+                              "alias": null,
+                              "args": null,
+                              "kind": "ScalarField",
+                              "name": "username",
+                              "storageKey": null
+                            },
+                            {
+                              "alias": null,
+                              "args": null,
+                              "kind": "ScalarField",
+                              "name": "id",
+                              "storageKey": null
+                            }
+                          ],
+                          "storageKey": null
+                        }
+                      ],
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "raw_text",
+                      "storageKey": null
+                    }
+                  ],
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "follower_count",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "concreteType": "XDTUserDict",
+                  "kind": "LinkedField",
+                  "name": "profile_context_facepile_users",
+                  "plural": true,
+                  "selections": [
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "profile_pic_url",
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "id",
+                      "storageKey": null
+                    }
+                  ],
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "concreteType": "XDTUserBioLinkDict",
+                  "kind": "LinkedField",
+                  "name": "bio_links",
+                  "plural": true,
+                  "selections": [
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "url",
+                      "storageKey": null
+                    }
+                  ],
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "pk",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "full_name",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "id",
+                  "storageKey": null
+                }
+              ],
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        }
+      ]
+    },
+    "params": {
+      "id": "23996318473300828",
+      "metadata": {},
+      "name": "BarcelonaProfileRootQuery",
+      "operationKind": "query",
+      "text": null
+    }
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaProfileThread_thread_item",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTThreadItem",
+        "kind": "LinkedField",
+        "name": "thread_items",
+        "plural": true,
+        "selections": [
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPost_thread_item"
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTThread",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "BarcelonaProfileUserFollowerCount_user",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "follower_count",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "profile_context_facepile_users",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "profile_pic_url",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTUserDict",
+    "abstractKey": null
+  },
+  {
+    "fragment": {
+      "argumentDefinitions": [
+        { "defaultValue": null, "kind": "LocalArgument", "name": "input" },
+        { "defaultValue": null, "kind": "LocalArgument", "name": "setting" }
+      ],
+      "kind": "Fragment",
+      "metadata": null,
+      "name": "CometSetDarkModeSettingMutation",
+      "selections": [
+        {
+          "alias": null,
+          "args": [
+            { "kind": "Variable", "name": "input", "variableName": "input" },
+            { "kind": "Variable", "name": "setting", "variableName": "setting" }
+          ],
+          "concreteType": "SetDarkModeSettingResponsePayload",
+          "kind": "LinkedField",
+          "name": "set_dark_mode_setting",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "Viewer",
+              "kind": "LinkedField",
+              "name": "viewer",
+              "plural": false,
+              "selections": [
+                {
+                  "alias": null,
+                  "args": [
+                    { "kind": "Literal", "name": "product", "value": "COMET" }
+                  ],
+                  "kind": "ScalarField",
+                  "name": "dark_mode_setting",
+                  "storageKey": "dark_mode_setting(product:\"COMET\")"
+                }
+              ],
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        }
+      ],
+      "type": "Mutation",
+      "abstractKey": null
+    },
+    "kind": "Request",
+    "operation": {
+      "argumentDefinitions": [
+        { "defaultValue": null, "kind": "LocalArgument", "name": "setting" },
+        { "defaultValue": null, "kind": "LocalArgument", "name": "input" }
+      ],
+      "kind": "Operation",
+      "name": "CometSetDarkModeSettingMutation",
+      "selections": [
+        {
+          "alias": null,
+          "args": [
+            { "kind": "Variable", "name": "input", "variableName": "input" },
+            { "kind": "Variable", "name": "setting", "variableName": "setting" }
+          ],
+          "concreteType": "SetDarkModeSettingResponsePayload",
+          "kind": "LinkedField",
+          "name": "set_dark_mode_setting",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "Viewer",
+              "kind": "LinkedField",
+              "name": "viewer",
+              "plural": false,
+              "selections": [
+                {
+                  "alias": null,
+                  "args": [
+                    { "kind": "Literal", "name": "product", "value": "COMET" }
+                  ],
+                  "kind": "ScalarField",
+                  "name": "dark_mode_setting",
+                  "storageKey": "dark_mode_setting(product:\"COMET\")"
+                }
+              ],
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        }
+      ]
+    },
+    "params": {
+      "id": "7080935065311534",
+      "metadata": {},
+      "name": "CometSetDarkModeSettingMutation",
+      "operationKind": "mutation",
+      "text": null
+    }
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelona1pxImpressionLogger_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "user",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "pk",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelonaCarouselLightboxMedias_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "concreteType": "XDTMediaDict",
+          "kind": "LinkedField",
+          "name": "carousel_media",
+          "plural": true,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "XDTImageVersion2",
+              "kind": "LinkedField",
+              "name": "image_versions2",
+              "plural": false,
+              "selections": [
+                {
+                  "alias": null,
+                  "args": null,
+                  "concreteType": "XDTImageCandidate",
+                  "kind": "LinkedField",
+                  "name": "candidates",
+                  "plural": true,
+                  "selections": [
+                    {
+                      "kind": "RequiredField",
+                      "field": {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "url",
+                        "storageKey": null
+                      },
+                      "action": "NONE",
+                      "path": "carousel_media.image_versions2.candidates.url"
+                    }
+                  ],
+                  "storageKey": null
+                }
+              ],
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "XDTVideoVersion",
+              "kind": "LinkedField",
+              "name": "video_versions",
+              "plural": true,
+              "selections": [
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "type",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "url",
+                  "storageKey": null
+                }
+              ],
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "has_audio",
+              "storageKey": null
+            },
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "original_height",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "carousel_media.original_height"
+            },
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "original_width",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "carousel_media.original_width"
+            },
+            {
+              "kind": "RequiredField",
+              "field": {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "pk",
+                "storageKey": null
+              },
+              "action": "THROW",
+              "path": "carousel_media.pk"
+            }
+          ],
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "carousel_media"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelonaImageCandidate_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "concreteType": "XDTImageVersion2",
+          "kind": "LinkedField",
+          "name": "image_versions2",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "XDTImageCandidate",
+              "kind": "LinkedField",
+              "name": "candidates",
+              "plural": true,
+              "selections": [
+                {
+                  "kind": "RequiredField",
+                  "field": {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "height",
+                    "storageKey": null
+                  },
+                  "action": "NONE",
+                  "path": "image_versions2.candidates.height"
+                },
+                {
+                  "kind": "RequiredField",
+                  "field": {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "url",
+                    "storageKey": null
+                  },
+                  "action": "NONE",
+                  "path": "image_versions2.candidates.url"
+                },
+                {
+                  "kind": "RequiredField",
+                  "field": {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "width",
+                    "storageKey": null
+                  },
+                  "action": "NONE",
+                  "path": "image_versions2.candidates.width"
+                }
+              ],
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "image_versions2"
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "original_width",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "original_width"
+      },
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "original_height",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "original_height"
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelonaPostMediaType_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTImageVersion2",
+        "kind": "LinkedField",
+        "name": "image_versions2",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "XDTImageCandidate",
+            "kind": "LinkedField",
+            "name": "candidates",
+            "plural": true,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "__typename",
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTVideoVersion",
+        "kind": "LinkedField",
+        "name": "video_versions",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "__typename",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "carousel_media_count",
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelonaPostOverlayInfo_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTMediaOverlayPayloadSchema",
+        "kind": "LinkedField",
+        "name": "media_overlay_info",
+        "plural": false,
+        "selections": [
+          {
+            "args": null,
+            "kind": "FragmentSpread",
+            "name": "BarcelonaPostOverlayInfo_mediaOverlayInfo"
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelonaVPVDImpressionLogger_media",
+    "selections": [
+      {
+        "kind": "RequiredField",
+        "field": {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "pk",
+          "storageKey": null
+        },
+        "action": "THROW",
+        "path": "pk"
+      },
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTUserDict",
+        "kind": "LinkedField",
+        "name": "user",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "pk",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  {
+    "argumentDefinitions": [],
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "useBarcelonaVideoVersions_media",
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "XDTVideoVersion",
+        "kind": "LinkedField",
+        "name": "video_versions",
+        "plural": true,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "type",
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "url",
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
+    "type": "XDTMediaDict",
+    "abstractKey": null
+  },
+  null,
+  null
+]
